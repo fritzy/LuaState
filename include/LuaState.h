@@ -136,6 +136,10 @@ namespace lua {
         Value operator[](lua::String name) const {
             return Value(_luaState, _deallocQueue, name);
         }
+
+        Value get(lua::String name) const {
+             return Value(_luaState, _deallocQueue, name);
+        }
         
         /// Deleted compare operator
         bool operator==(Value &other) = delete;

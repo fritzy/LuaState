@@ -345,6 +345,10 @@ namespace lua {
             lua_settable(_stack->state, _stack->top + _stack->pushed - _stack->grouped);
         }
         
+        int length() const {
+            return lua_objlen(_stack->state, _stack->top + _stack->pushed - _stack->grouped);
+        }
+
         template<typename K>
         void set(K key, const std::string& value) const {
             setString<lua::String>(key, value);

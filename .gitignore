@@ -6,3 +6,5 @@ install_manifest.txt
 
 docs/*
 build/*
+html/*
+latex/*
